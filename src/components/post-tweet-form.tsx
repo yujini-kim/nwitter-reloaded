@@ -69,9 +69,9 @@ export default function PostTweetForm() {
     if (files && files.length === 1) {
       const selectedFile = files[0];
 
-      if (selectedFile.size > 1_048_576) {
-        // 1MB = 1,048,576 bytes
-        alert("파일 크기가 1MB를 초과할 수 없습니다.");
+      if (selectedFile.size > 1_024) {
+        // 1KB = 1,024 bytes
+        alert("파일 크기가 1KB를 초과할 수 없습니다.");
         return;
       }
 
